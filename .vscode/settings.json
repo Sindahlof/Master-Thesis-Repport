@@ -1,0 +1,28 @@
+  {
+    "latex-workshop.latex.outDir": "build",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.ref.viewer": "tab",
+    "latex-workshop.latex.autoBuild.run": "onSave", // Or "onSave" if you want live builds
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "latexmk (build/)",
+        "tools": ["latexmk"]
+      }
+    ],
+    "latex-workshop.latex.tools": [
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-outdir=build",
+          "%DOC%"
+        ]
+      }
+    ]
+  }
+  
+  
